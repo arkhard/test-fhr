@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Хоккейное табло</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scoreboard">
+
+  <div class="header">
+    <div class="period-label">
+      Период
+    </div>
+
+    <div
+      id="periodDisplay"
+      class="period"
+    >
+      1-й
+    </div>
+  </div>
+
+  <div class="match">
+    <div
+      id="leftTeam"
+      class="team tie"
+    >
+      <div class="team-name">
+        ЦСКА
+      </div>
+
+      <div
+        id="left-score"
+        class="team-score"
+      >
+        0
+      </div>
+
+      <div class="team-controls">
+        <button
+          id="left-plus"
+          class="btn plus"
+          title="Добавить гол"
+        >
+          +
+        </button>
+
+        <button
+          id="left-minus"
+          class="btn minus"
+          title="Убрать гол"
+          disabled
+        >
+          -
+        </button>
+      </div>
+    </div>
+
+    <div class="divider">
+      <div class="vs-label">
+        VS
+      </div>
+
+      <div class="colon">
+        :
+      </div>
+    </div>
+
+    <div
+      id="rightTeam"
+      class="team tie"
+    >
+      <div class="team-name">
+        Локомотив
+      </div>
+
+      <div
+        id="right-score"
+        class="team-score"
+      >
+        0
+      </div>
+
+      <div class="team-controls">
+        <button
+          id="right-plus"
+          class="btn plus"
+          title="Добавить гол"
+        >
+          +
+        </button>
+
+        <button
+          id="right-minus"
+          class="btn minus"
+          title="Убрать гол"
+          disabled
+        >
+          -
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div
+    id="status"
+    class="status"
+    data-left-team="ЦСКА"
+    data-right-team="Локомотив"
+  >
+    Ничья
+  </div>
+
+  <div class="reset-wrap">
+    <button
+      id="reset-button"
+      class="btn-reset"
+    >
+      Сбросить счёт
+    </button>
+  </div>
+
+</div>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
