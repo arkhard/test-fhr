@@ -1,0 +1,60 @@
+@use '../../../styles/colors' as *;
+
+.fhr-fileupload {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__label {
+    font-size: 16px;
+    font-weight: 700;
+    color: $fhr-color-text-dark;
+  }
+
+  &__control {
+    display: flex;
+    align-items: stretch;
+    border: 1.5px solid $fhr-color-border;
+    border-radius: 8px;
+    overflow: hidden;
+    background: $fhr-color-bg;
+
+    &--disabled {
+      opacity: 0.6;
+      pointer-events: none;
+      background: $fhr-color-bg-disabled;
+    }
+  }
+
+  &__filename {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 15px;
+    color: $fhr-color-text-dark;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__browse {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: $fhr-color-text-dark;
+    background: $fhr-color-bg;
+    border-left: 1.5px solid $fhr-color-border;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s ease;
+
+    &--disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  &__hidden-input {
+    display: none;
+  }
+}

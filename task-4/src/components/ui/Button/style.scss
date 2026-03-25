@@ -1,0 +1,64 @@
+@use '../../../styles/colors' as *;
+
+.fhr-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: filter 0.15s ease, opacity 0.15s ease;
+  white-space: nowrap;
+  line-height: 24px;
+  letter-spacing: 1px;
+
+  &:hover:not(:disabled) {
+    filter: brightness(0.92);
+  }
+  &:active:not(:disabled) {
+    filter: brightness(0.85);
+  }
+
+  &--disabled,
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &--primary {
+    background-color: $fhr-color-primary;
+    color: $fhr-color-text-light;
+  }
+  &--secondary {
+    background-color: $fhr-color-secondary;
+    color: $fhr-color-text-light;
+  }
+  &--success {
+    background-color: $fhr-color-success;
+    color: $fhr-color-text-light;
+  }
+  &--danger {
+    background-color: $fhr-color-error;
+    color: $fhr-color-text-light;
+  }
+  &--warning {
+    background-color: $fhr-color-warning;
+    color: $fhr-color-text-light;
+  }
+  &--info {
+    background-color: $fhr-color-info;
+    color: $fhr-color-text-light;
+  }
+  &--dark {
+    background-color: $fhr-color-dark;
+    color: $fhr-color-text-light;
+  }
+
+  &--light {
+    background-color: $fhr-color-light;
+    color: $fhr-color-text-dark;
+  }
+}
