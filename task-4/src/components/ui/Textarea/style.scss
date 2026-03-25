@@ -1,0 +1,57 @@
+@use '../../../styles/colors' as *;
+
+.fhr-textarea {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__label {
+    font-size: 16px;
+    font-weight: 700;
+    color: $fhr-color-text-dark;
+  }
+
+  &__textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 15px;
+    font-family: inherit;
+    color: $fhr-color-text-dark;
+    background: $fhr-color-bg;
+    border: 1.5px solid $fhr-color-border;
+    border-radius: 8px;
+    outline: none;
+    resize: vertical;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+    &::placeholder {
+      color: $fhr-color-text-placeholder;
+    }
+
+    &:focus {
+      border-color: $fhr-color-focus-border;
+      box-shadow: 0 0 0 3px $fhr-color-focus-shadow;
+    }
+
+    &:disabled {
+      background: $fhr-color-bg-disabled;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
+    &--error {
+      border-color: $fhr-color-error;
+
+      &:focus {
+        border-color: $fhr-color-error;
+        box-shadow: 0 0 0 3px rgba($fhr-color-error, 0.18);
+      }
+    }
+  }
+
+  &__error {
+    font-size: 13px;
+    color: $fhr-color-error;
+  }
+}

@@ -1,0 +1,77 @@
+@use '../../../styles/colors' as *;
+
+.fhr-accordion {
+  border: 1.5px solid $fhr-color-border;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.fhr-accordion-item {
+  border-bottom: 1px solid $fhr-color-border;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 18px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    gap: 16px;
+  }
+
+  &__title {
+    font-size: 15px;
+    font-weight: 700;
+    color: $fhr-color-text-dark;
+  }
+
+  &__chevron {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    color: $fhr-color-icon;
+    transition: transform 0.25s ease;
+  }
+
+  &__body {
+    overflow: hidden;
+  }
+
+  &__content {
+    padding: 0 20px 20px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: $fhr-color-text-medium;
+  }
+
+  &--open {
+    .fhr-accordion-item {
+      &__header {
+        border-bottom: 1px solid $fhr-color-border;
+      }
+      &__chevron {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.accordion-enter-active,
+.accordion-leave-active {
+  transition: opacity 0.22s ease, max-height 0.28s ease;
+  max-height: 600px;
+  opacity: 1;
+}
+
+.accordion-enter-from,
+.accordion-leave-to {
+  max-height: 0;
+  opacity: 0;
+}
